@@ -28,7 +28,7 @@
     overflow-x: hidden;
   }
 
-  /* ---- NOISE OVERLAY ---- */
+  /* NOISE OVERLAY */
   body::before {
     content: '';
     position: fixed; inset: 0;
@@ -36,7 +36,7 @@
     pointer-events: none; z-index: 9999; opacity: 0.4;
   }
 
-  /* ---- NAV ---- */
+  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
@@ -68,7 +68,7 @@
   }
   .nav-cta:hover { background: var(--purple-light); transform: translateY(-1px); }
 
-  /* ---- HERO ---- */
+  /* HERO */
   #home {
     min-height: 100vh;
     display: flex; flex-direction: column; justify-content: center; align-items: center;
@@ -140,7 +140,7 @@
   }
   .stat-label { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.3rem; letter-spacing: 0.05em; }
 
-  /* ---- SECTION BASE ---- */
+  /* SECTION BASE */
   section { padding: 7rem 5%; }
   .section-tag {
     display: inline-block;
@@ -159,7 +159,7 @@
     max-width: 500px; margin-top: 1rem;
   }
 
-  /* ---- SERVICES ---- */
+  /* SERVICES */
   #services { background: var(--surface); }
   .services-header { max-width: 1200px; margin: 0 auto 3.5rem; }
   .services-grid {
@@ -186,18 +186,13 @@
   }
   .service-card:hover::before { opacity: 1; }
   .service-card:hover { background: var(--surface2); }
-  .service-icon {
-    font-size: 1.8rem; margin-bottom: 1.2rem;
-    display: block;
-  }
+  .service-icon { font-size: 1.8rem; margin-bottom: 1.2rem; display: block; }
   .service-name {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.45rem; font-weight: 400; color: var(--accent);
     margin-bottom: 0.6rem;
   }
-  .service-desc {
-    font-size: 0.88rem; color: var(--text-muted); line-height: 1.75;
-  }
+  .service-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.75; }
   .service-link {
     display: inline-flex; align-items: center; gap: 0.4rem;
     font-size: 0.82rem; color: var(--purple-light);
@@ -206,15 +201,12 @@
   }
   .service-link:hover { gap: 0.7rem; }
 
-  /* ---- ABOUT ---- */
+  /* ABOUT */
   #about {
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 5rem; align-items: center;
     max-width: 1200px; margin: 0 auto;
     padding: 7rem 5%;
-  }
-  .about-visual {
-    position: relative;
   }
   .about-box {
     background: var(--surface);
@@ -250,7 +242,6 @@
   }
   .value-text { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
   .value-text strong { display: block; color: var(--text); margin-bottom: 0.2rem; font-size: 0.92rem; }
-
   .about-content .section-sub { max-width: 100%; }
   .about-highlight {
     margin-top: 2rem;
@@ -262,11 +253,9 @@
     font-style: italic; line-height: 1.75;
   }
 
-  /* ---- CONTACT ---- */
+  /* CONTACT */
   #contact { background: var(--surface); }
-  .contact-inner {
-    max-width: 700px; margin: 0 auto; text-align: center;
-  }
+  .contact-inner { max-width: 700px; margin: 0 auto; text-align: center; }
   .contact-form {
     margin-top: 3rem;
     display: flex; flex-direction: column; gap: 1.2rem;
@@ -288,6 +277,7 @@
   }
   input:focus, textarea:focus, select:focus { border-color: var(--purple-mid); }
   textarea { resize: vertical; min-height: 130px; }
+  select option { background: var(--surface2); color: var(--text); }
   .form-submit {
     background: var(--purple-mid);
     color: #fff; border: none;
@@ -308,23 +298,20 @@
   .contact-item-text { font-size: 0.88rem; color: var(--text-muted); }
   .contact-item-text a { color: var(--purple-glow); text-decoration: none; }
 
-  /* ---- FOOTER ---- */
+  /* FOOTER */
   footer {
     padding: 3rem 5%;
     border-top: 1px solid var(--border);
     display: flex; justify-content: space-between; align-items: center;
     flex-wrap: wrap; gap: 1rem;
   }
-  .footer-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem; color: var(--text-muted);
-  }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--text-muted); }
   .footer-copy { font-size: 0.8rem; color: var(--text-muted); }
   .footer-links { display: flex; gap: 1.5rem; }
   .footer-links a { font-size: 0.82rem; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
   .footer-links a:hover { color: var(--purple-glow); }
 
-  /* ---- ANIMATIONS ---- */
+  /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -335,7 +322,7 @@
   }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
-  /* ---- MOBILE ---- */
+  /* MOBILE */
   @media (max-width: 768px) {
     #about { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 5%; }
     .hero-stats { gap: 2rem; }
@@ -364,7 +351,6 @@
   <div class="hero-orb orb1"></div>
   <div class="hero-orb orb2"></div>
   <div class="hero-orb orb3"></div>
-
   <span class="hero-tag">Digital Tools &amp; Services</span>
   <h1 class="hero-headline">Craft the <em>Future</em><br>of Your Business</h1>
   <p class="hero-sub">We build powerful digital tools and services that help creators and businesses scale without the noise.</p>
@@ -470,8 +456,7 @@
     <div class="about-highlight">
       "Our mission is simple: help creators and businesses build a digital presence that works as hard as they do."
     </div>
-    <br>
-    <a href="#contact" class="btn-primary" style="display:inline-block; margin-top:1rem;">Start a Conversation</a>
+    <a href="#contact" class="btn-primary" style="display:inline-block; margin-top:2rem;">Start a Conversation</a>
   </div>
 </div>
 
@@ -500,8 +485,8 @@
           <option>Digital Strategy</option>
           <option>Tool Development</option>
           <option>Brand Identity</option>
-          <option>Growth & Analytics</option>
-          <option>Integrations & API</option>
+          <option>Growth &amp; Analytics</option>
+          <option>Integrations &amp; API</option>
           <option>Ongoing Support</option>
         </select>
       </div>
@@ -518,7 +503,7 @@
       </div>
       <div class="contact-item">
         <span class="contact-item-icon">📧</span>
-        <div class="contact-item-text"><a href="/cdn-cgi/l/email-protection#d9b1bcb5b5b699adb1bcbaabbcb8adb6abbaabb8bfadf7bab6"><span class="__cf_email__" data-cfemail="3159545d5d5e7145595452435450455e4352435057451f525e">[email&#160;protected]</span></a></div>
+        <div class="contact-item-text"><a href="mailto:hello@thecreatorcraft.co">hello@thecreatorcraft.co</a></div>
       </div>
     </div>
   </div>
@@ -536,14 +521,12 @@
   <div class="footer-copy">© 2026 TheCreatorCraft. All rights reserved.</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Scroll reveal
+<script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 
-  // Form submit handler
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('.form-submit
+</body>
+</html>
