@@ -483,20 +483,20 @@
       <h2 class="section-title">Let's Build<br><em>Something Together</em></h2>
       <p class="section-sub" style="margin: 1rem auto 0;">Tell us what you're working on and we'll find the best way to help you move forward.</p>
     </div>
-    <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+    <form class="contact-form reveal" action="https://formspree.io/f/xeepowel" method="POST">
       <div class="form-row">
         <div class="form-group">
           <label>Full Name</label>
-          <input type="text" placeholder="Your name" required />
+          <input type="text" name="name" placeholder="Your name" required />
         </div>
         <div class="form-group">
           <label>Email Address</label>
-          <input type="email" placeholder="you@email.com" required />
+          <input type="email" name="email" placeholder="you@email.com" required />
         </div>
       </div>
       <div class="form-group">
         <label>Service Interest</label>
-        <select>
+        <select name="service">
           <option>Digital Strategy</option>
           <option>Tool Development</option>
           <option>Brand Identity</option>
@@ -507,7 +507,7 @@
       </div>
       <div class="form-group">
         <label>Message</label>
-        <textarea placeholder="Tell us about your project..."></textarea>
+        <textarea name="message" placeholder="Tell us about your project..."></textarea>
       </div>
       <button type="submit" class="form-submit">Send Message →</button>
     </form>
@@ -518,7 +518,7 @@
       </div>
       <div class="contact-item">
         <span class="contact-item-icon">📧</span>
-        <div class="contact-item-text"><a href="mailto:hello@thecreatorcraft.co">hello@thecreatorcraft.co</a></div>
+        <div class="contact-item-text"><a href="/cdn-cgi/l/email-protection#d9b1bcb5b5b699adb1bcbaabbcb8adb6abbaabb8bfadf7bab6"><span class="__cf_email__" data-cfemail="3159545d5d5e7145595452435450455e4352435057451f525e">[email&#160;protected]</span></a></div>
       </div>
     </div>
   </div>
@@ -536,7 +536,7 @@
   <div class="footer-copy">© 2026 TheCreatorCraft. All rights reserved.</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
@@ -546,15 +546,4 @@
   // Form submit handler
   function handleSubmit(e) {
     e.preventDefault();
-    const btn = e.target.querySelector('.form-submit');
-    btn.textContent = '✓ Message Sent!';
-    btn.style.background = '#4ade80';
-    setTimeout(() => {
-      btn.textContent = 'Send Message →';
-      btn.style.background = '';
-      e.target.reset();
-    }, 3000);
-  }
-</script>
-</body>
-</html>
+    const btn = e.target.querySelector('.form-submit
